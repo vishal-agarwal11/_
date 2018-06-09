@@ -1,0 +1,13 @@
+<application>
+  <component name="ProjectManager">
+    <defaultProject>
+      <component name="ProjectRootManager" version="2" project-jdk-name="Python 2.7 (Practise)" project-jdk-type="Python SDK" />
+      <component name="PropertiesComponent">
+        <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+      </component>
+      <component name="VcsContentAnnotationSettings">
+        <option name="myLimit" value="2678400000" />
+      </component>
+    </defaultProject>
+  </component>
+</application>
