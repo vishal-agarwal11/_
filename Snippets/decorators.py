@@ -13,11 +13,11 @@ def test(a,b):
 
 
 
-def with_retries(retries=3, interval=1):
+def with_retries(retries=3, interval=1 ,**kwargs):
     def param_decor(func):
-        def inner(a, b):
+        def inner(*args):
             for i in range(retries):
-                func(a, b)
+                func(*args)
                 time.sleep(interval)
         return inner
     return param_decor
