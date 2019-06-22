@@ -29,5 +29,6 @@ if __name__ == "__main__":
     n = MyClass()
     o = type(m)()
 
-    print(m,n,o)
+    print(m,'\n',n,'\n',o)
+    print(m==n==o)
 

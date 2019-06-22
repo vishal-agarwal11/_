@@ -14,8 +14,6 @@ class MyClass:
 m = MyClass()
 n = MyClass()
 o = type(n)()
-print(m == n)
-print(m != o)
-print(n != o)
 
-print(m,n,o)
+print(m,'\n',n,'\n',o)
+print(m==n==o)
