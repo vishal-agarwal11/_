@@ -30,5 +30,6 @@ if __name__ == "__main__":
     o = type(m)()
 
     print(m,'\n',n,'\n',o)
+    print(list(map(lambda x: id(x), [m, n, o])))
     print(m==n==o)
 

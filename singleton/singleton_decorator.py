@@ -15,5 +15,6 @@ m = MyClass()
 n = MyClass()
 o = type(n)()
 
+print(list(map(lambda x: id(x), [m,n,o])))
 print(m,'\n',n,'\n',o)
 print(m==n==o)
