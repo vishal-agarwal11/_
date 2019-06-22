@@ -16,8 +16,8 @@ class BaseClass:
 
 
 class MyClass(BaseClass, metaclass=Singleton):
-    def __init__(self):
-        super(MyClass, self).__init__()
+    def __init__(self, *args, **kwargs):
+        super(MyClass, self).__init__(*args, **kwargs)
 
 
 class MyClass1(metaclass=Singleton):
@@ -25,6 +25,9 @@ class MyClass1(metaclass=Singleton):
 
 
 if __name__ == "__main__":
-    print(MyClass())
-    print(MyClass())
+    m = MyClass()
+    n = MyClass()
+    o = type(m)()
+
+    print(m,n,o)
 
