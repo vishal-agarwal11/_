@@ -5,10 +5,9 @@ class Example(object):
 
     def __call__(self, value):
         if value not in self.factorial.keys():
-            print "calling factorial method"
-            self.factorial[value] =  self.fact(value)
+            print("calling factorial method")
+            self.factorial[value] = self.fact(value)
         return self.factorial[value]
-
 
     def fact(self, number):
         if number == 1:
@@ -19,8 +18,7 @@ class Example(object):
 
 if __name__ == "__main__":
     e = Example()
-
-    print e(3)
-    print e(4)
-    print e(5)
-    print e(3)
+    print(e(3))
+    print(e(4))
+    print(e(5))
+    print(e(3))
