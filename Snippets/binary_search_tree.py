@@ -1,8 +1,9 @@
 class Node:
-    def __init__(self,data):
+    def __init__(self, data):
         self.left = None
         self.data = data
         self.right = None
+
 
 class Tree:
     def __init__(self):
@@ -12,7 +13,7 @@ class Tree:
         if self.root:
             self._traverse_print(self.root)
 
-    def _traverse_print(self,curr):
+    def _traverse_print(self, curr):
         if curr.left and curr.right:
             self._traverse_print(curr.left)
             print(curr.data)
@@ -36,13 +37,13 @@ class Tree:
         elif data > ptr.data and not ptr.right:
             ptr.right = Node(data)
 
-    def insert(self,data):
+    def insert(self, data):
         if not self.root:
             self.root = Node(data)
         else:
             self._traverse_insert(self.root, data)
-            
-            
+
+
 if __name__ == "__main__":
     t = Tree()
     t.insert(21)
@@ -57,4 +58,3 @@ if __name__ == "__main__":
     t.insert(9)
     t.insert(6)
     t.traverse_print()
-
