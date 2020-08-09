@@ -1,3 +1,7 @@
+"""
+This code return the 1st and 2nd highest in an array
+"""
+
 def SecondLargest(x):
         m1=m2=0
         for item in x:
