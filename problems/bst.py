@@ -111,6 +111,23 @@ class BST:
             queue.append(self.root)
             self.level_traversing()
 
+    def sumOfLeftLeaves(self, root: TreeNode) -> int:
+        sum_ = 0
+        if not root:
+            return sum_
+        elif root.left and root.right:
+            if not root.left.left and not root.left.right:
+                sum_ += root.left.val
+            sum_ += self.sumOfLeftLeaves(root.left)
+            sum_ += self.sumOfLeftLeaves(root.right)
+        elif root.left and not root.right:
+            if not root.left.left and not root.left.right:
+                sum_ += root.left.val
+            sum_ += self.sumOfLeftLeaves(root.left)
+        elif root.right and not root.left:
+            sum_ += self.sumOfLeftLeaves(root.right)
+        return sum_
+
 
 
 if __name__ == "__main__":
@@ -130,3 +147,4 @@ if __name__ == "__main__":
     # print(bst.checkBST(bst.root))
     # print(bst.height(bst.root))
     bst.level_traversing()
+    print(bst.sumOfLeftLeaves(bst.root))
